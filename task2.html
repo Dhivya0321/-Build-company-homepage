@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechNova Company</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* Header */
+header{
+    background:linear-gradient(90deg,#6a11cb,#2575fc);
+    color:white;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* Hero */
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    color:white;
+    background:linear-gradient(-45deg,#ff6b6b,#6c5ce7,#00cec9,#fdcb6e);
+    background-size:400% 400%;
+    animation:gradient 8s ease infinite;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:15px 35px;
+    background:white;
+    color:#333;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* Services */
+.services{
+    padding:70px 20px;
+    text-align:center;
+}
+
+.services h2{
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.card{
+    width:300px;
+    padding:25px;
+    border-radius:15px;
+    color:white;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card1{
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.card2{
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+}
+
+.card3{
+    background:linear-gradient(135deg,#43cea2,#185a9d);
+}
+
+/* About */
+.about{
+    padding:70px 20px;
+    text-align:center;
+    background:white;
+}
+
+.about h2{
+    margin-bottom:20px;
+    color:#333;
+}
+
+/* Team */
+.team{
+    padding:70px 20px;
+    text-align:center;
+}
+
+.team h2{
+    margin-bottom:40px;
+}
+
+.team-members{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.member{
+    background:white;
+    padding:20px;
+    width:250px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Contact */
+.contact{
+    padding:70px 20px;
+    text-align:center;
+    background:white;
+}
+
+input, textarea{
+    width:80%;
+    max-width:500px;
+    padding:12px;
+    margin:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    padding:12px 30px;
+    border:none;
+    background:#2575fc;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+header{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:10px;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">TechNova</div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Welcome to TechNova</h1>
+    <p>Innovative Solutions for Modern Businesses</p>
+    <a href="#services" class="btn">Explore Services</a>
+</section>
+
+<section class="services" id="services">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+        <div class="card card1">
+            <h3>Web Development</h3>
+            <p>Modern and responsive websites.</p>
+        </div>
+
+        <div class="card card2">
+            <h3>Mobile Apps</h3>
+            <p>Android and iOS application development.</p>
+        </div>
+
+        <div class="card card3">
+            <h3>Cloud Solutions</h3>
+            <p>Secure and scalable cloud services.</p>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+        TechNova is a leading technology company providing
+        innovative software solutions worldwide.
+    </p>
+</section>
+
+<section class="team" id="team">
+    <h2>Our Team</h2>
+
+    <div class="team-members">
+        <div class="member">
+            <h3>John Smith</h3>
+            <p>CEO</p>
+        </div>
+
+        <div class="member">
+            <h3>Sarah Johnson</h3>
+            <p>Project Manager</p>
+        </div>
+
+        <div class="member">
+            <h3>David Lee</h3>
+            <p>Lead Developer</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+
+    <input type="text" placeholder="Your Name"><br>
+
+    <input type="email" placeholder="Your Email"><br>
+
+    <textarea rows="5" placeholder="Your Message"></textarea><br>
+
+    <button onclick="sendMessage()">Send Message</button>
+</section>
+
+<footer>
+    <p>© 2026 TechNova Company. All Rights Reserved.</p>
+</footer>
+
+<script>
+function sendMessage(){
+    alert("Thank you! Your message has been submitted.");
+}
+</script>
+
+</body>
+</html>
